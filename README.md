@@ -11,7 +11,7 @@ jvtechy-site/
 ├── index.html
 ├── privacidade.html
 ├── termos.html
-├── assets/           # logo.svg, logo-icon.svg
+├── assets/           # logo.png, logo-icon.png, favicon.png
 ├── css/styles.css
 ├── js/
 │   ├── config.js     # WhatsApp, e-mail, links dos produtos

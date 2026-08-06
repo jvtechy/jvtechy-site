@@ -5,6 +5,7 @@
   "description": "Site institucional da JVTechy — Desenvolvimento e Licenciamento de Softwares",
   "scripts": {
     "dev": "npx --yes serve . -p 4322",
-    "preview": "npx --yes serve . -p 4322"
+    "preview": "npx --yes serve . -p 4322",
+    "process-logo": "node scripts/process-logo.mjs"
   }
 }
