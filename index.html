@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JVTechy — Desenvolvimento e Licenciamento de Softwares. Especialistas em TOTVS Consinco ERP/PDV para supermercados e desenvolvimento Web & Mobile sob demanda." />
+  <meta name="theme-color" content="#0f0f0f" />
+  <meta property="og:title" content="JVTechy — Desenvolvimento e Licenciamento de Softwares" />
+  <meta property="og:description" content="Suporte especializado TOTVS Consinco ERP/PDV e desenvolvimento de aplicações Web e Mobile sob demanda." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jvtechy.com/" />
+  <title>JVTechy — Desenvolvimento e Licenciamento de Softwares</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo-icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#10B981',
+            dark: { DEFAULT: '#0F0F0F', card: '#1E1E1E', muted: '#2D2D2D' },
+            gold: { DEFAULT: '#F59E0B', light: '#FBBF24' },
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            display: ['Sora', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-gray-100 antialiased overflow-x-hidden">
+
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 glass-strong transition-shadow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center shrink-0" aria-label="JVTechy — início">
+        <img src="assets/logo.svg" alt="JVTechy" class="h-8 sm:h-9 w-auto" />
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm text-gray-300" aria-label="Principal">
+        <a href="#confianca" class="hover:text-primary transition-colors">Confiança</a>
+        <a href="#consinco" class="hover:text-primary transition-colors">Consinco / PDV</a>
+        <a href="#desenvolvimento" class="hover:text-primary transition-colors">Desenvolvimento</a>
+        <a href="#produtos" class="hover:text-primary transition-colors">Produtos</a>
+        <a href="#contato" class="hover:text-primary transition-colors">Contato</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a data-wa-link data-wa-message="Olá! Gostaria de falar com um especialista da JVTechy." class="hidden sm:inline-flex btn-primary text-white text-sm font-semibold px-4 py-2.5 rounded-xl">
+          Falar com especialista
+        </a>
+        <button id="menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-gray-300 hover:bg-white/5" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="fixed inset-0 z-[60] lg:hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/60 opacity-0 transition-opacity" id="mobile-backdrop"></div>
+    <aside class="absolute top-0 right-0 h-full w-[min(100%,320px)] glass-strong translate-x-full transition-transform duration-300 flex flex-col p-6">
+      <div class="flex justify-between items-center mb-8">
+        <img src="assets/logo.svg" alt="" class="h-8" />
+        <button id="close-menu" type="button" class="p-2 rounded-lg hover:bg-white/5" aria-label="Fechar menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4 text-lg">
+        <a href="#confianca" class="hover:text-primary">Confiança</a>
+        <a href="#consinco" class="hover:text-primary">Consinco / PDV</a>
+        <a href="#desenvolvimento" class="hover:text-primary">Desenvolvimento</a>
+        <a href="#produtos" class="hover:text-primary">Produtos</a>
+        <a href="#contato" class="hover:text-primary">Contato</a>
+      </nav>
+      <a data-wa-link data-wa-message="Olá! Gostaria de falar com um especialista da JVTechy." class="mt-8 btn-primary text-center text-white font-semibold py-3 rounded-xl">
+        Falar com especialista
+      </a>
+    </aside>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-[100svh] flex items-center pt-20 pb-16 hero-glow overflow-hidden">
+      <div class="absolute inset-0 hero-grid pointer-events-none" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 w-full grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-10 items-center">
+        <div class="reveal">
+          <p class="font-display text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-4">JVTechy</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-tight text-white">
+            Tecnologia com
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-primary">segurança</span>
+            e execução para o seu negócio
+          </h1>
+          <p class="mt-5 text-base sm:text-lg text-gray-400 max-w-xl leading-relaxed">
+            Especialistas em TOTVS Consinco ERP/PDV para supermercados e desenvolvimento de aplicações Web e Mobile sob demanda.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#contato" class="btn-primary inline-flex items-center justify-center gap-2 text-white font-bold px-6 py-3.5 rounded-xl text-sm sm:text-base">
+              Solicitar pré-cadastro
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#consinco" class="btn-outline inline-flex items-center justify-center gap-2 text-gray-200 font-semibold px-6 py-3.5 rounded-xl text-sm sm:text-base">
+              Ver serviços Consinco
+            </a>
+          </div>
+        </div>
+
+        <div class="relative flex justify-center lg:justify-end reveal reveal-delay-2">
+          <div class="float-soft relative w-full max-w-md">
+            <div class="absolute -inset-6 bg-primary/15 blur-3xl rounded-full" aria-hidden="true"></div>
+            <div class="relative glass gradient-border rounded-[2rem] p-8 sm:p-10 text-center">
+              <img src="assets/logo-icon.svg" alt="" class="brand-mark w-24 h-24 mx-auto mb-6" width="96" height="96" />
+              <p class="font-display text-2xl font-bold text-white">JVTechy</p>
+              <p class="mt-2 text-sm text-gray-400">Desenvolvimento e Licenciamento de Softwares</p>
+              <div class="mt-8 grid grid-cols-3 gap-3 text-center">
+                <div>
+                  <p class="font-display text-lg font-bold text-primary">ERP</p>
+                  <p class="text-[11px] text-gray-500 mt-1">Consinco</p>
+                </div>
+                <div>
+                  <p class="font-display text-lg font-bold text-gold-light">PDV</p>
+                  <p class="text-[11px] text-gray-500 mt-1">Acrux</p>
+                </div>
+                <div>
+                  <p class="font-display text-lg font-bold text-white">Apps</p>
+                  <p class="text-[11px] text-gray-500 mt-1">Web & Mobile</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confiança -->
+    <section id="confianca" class="py-16 sm:py-24 bg-dark-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <p class="section-label text-primary text-xs font-bold uppercase mb-2">Compromisso</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Segurança, seriedade e execução</h2>
+          <p class="mt-3 text-gray-400">Equipe comprometida em encontrar soluções e entregar com responsabilidade.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="reveal glass rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center text-primary mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 3l7 3v6c0 4.5-3 8.5-7 9.5C8 20.5 5 16.5 5 12V6l7-3z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-white mb-2">Segurança</h3>
+            <p class="text-sm text-gray-400">Gestão de usuários, acessos e configurações críticas de PDV com critério e rastreabilidade.</p>
+          </article>
+          <article class="reveal reveal-delay-1 glass rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-gold/15 flex items-center justify-center text-gold-light mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M9 12l2 2 4-4M7 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-white mb-2">Seriedade</h3>
+            <p class="text-sm text-gray-400">Atendimento técnico claro, alinhado à operação de varejo e às prioridades da loja.</p>
+          </article>
+          <article class="reveal reveal-delay-2 glass rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center text-primary mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-white mb-2">Comprometimento</h3>
+            <p class="text-sm text-gray-400">Do diagnóstico à execução: focamos em resolver e acompanhar até a estabilização.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consinco / PDV -->
+    <section id="consinco" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mb-12 reveal">
+          <p class="section-label text-primary text-xs font-bold uppercase mb-2">Varejo · Supermercados</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Suporte especializado TOTVS Linha Consinco ERP/PDV</h2>
+          <p class="mt-3 text-gray-400">
+            Apoio técnico para operação de loja, PDVs, AcruxMonitor, pagamentos e promoções — com foco em estabilidade e segurança.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="service-item glass rounded-2xl p-5 reveal">
+            <h3 class="font-semibold text-white mb-2">Gestão de PDVs</h3>
+            <p class="text-sm text-gray-400">Gerenciamento e gestão de PDVs para manter a operação da loja estável.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal reveal-delay-1">
+            <h3 class="font-semibold text-white mb-2">AcruxMonitor</h3>
+            <p class="text-sm text-gray-400">Configurações e ajustes do AcruxMonitor alinhados ao fluxo do caixa.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal reveal-delay-2">
+            <h3 class="font-semibold text-white mb-2">Configurações de PDVs</h3>
+            <p class="text-sm text-gray-400">Parametrização de PDVs conforme a necessidade de cada unidade.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal">
+            <h3 class="font-semibold text-white mb-2">Implantação de lojas</h3>
+            <p class="text-sm text-gray-400">Implantação e configuração de novas lojas com checklist operacional.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal reveal-delay-1">
+            <h3 class="font-semibold text-white mb-2">Segurança de usuários</h3>
+            <p class="text-sm text-gray-400">Gestão de segurança e permissões de usuários nos PDVs.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal reveal-delay-2">
+            <h3 class="font-semibold text-white mb-2">Pagamentos no ERP</h3>
+            <p class="text-sm text-gray-400">Configurações de formas de pagamento no ERP Consinco.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal">
+            <h3 class="font-semibold text-white mb-2">Pagamentos no PDV</h3>
+            <p class="text-sm text-gray-400">Formas de pagamento no AcruxMonitor e nos PDVs.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal reveal-delay-1">
+            <h3 class="font-semibold text-white mb-2">Cartões crédito/débito</h3>
+            <p class="text-sm text-gray-400">Configurações de cartões de crédito e débito nos PDVs.</p>
+          </article>
+          <article class="service-item glass rounded-2xl p-5 reveal reveal-delay-2">
+            <h3 class="font-semibold text-white mb-2">Promoções e cupons</h3>
+            <p class="text-sm text-gray-400">Promoções e cupons promocionais configurados corretamente no PDV.</p>
+          </article>
+        </div>
+
+        <div class="mt-10 reveal">
+          <a href="#contato" data-interesse="Suporte Consinco / PDV" class="btn-primary inline-flex items-center gap-2 text-white font-semibold px-5 py-3 rounded-xl text-sm">
+            Solicitar suporte Consinco
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desenvolvimento -->
+    <section id="desenvolvimento" class="py-16 sm:py-24 bg-dark-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-end mb-12">
+          <div class="reveal">
+            <p class="section-label text-primary text-xs font-bold uppercase mb-2">Sob demanda</p>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Desenvolvimento de Aplicações Web e Mobile</h2>
+          </div>
+          <p class="reveal reveal-delay-1 text-gray-400 lg:text-right">
+            Projetamos e desenvolvemos soluções digitais sob medida — do briefing ao go-live — com o mesmo rigor do suporte em varejo.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <article class="reveal glass gradient-border rounded-3xl p-7">
+            <p class="text-xs font-bold uppercase tracking-widest text-primary mb-3">Web Apps & PWA</p>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Sistemas no navegador</h3>
+            <p class="text-sm text-gray-400">Aplicações web modernas e PWA, acessíveis no celular e no computador, sem depender de loja de apps.</p>
+          </article>
+          <article class="reveal reveal-delay-1 glass gradient-border rounded-3xl p-7">
+            <p class="text-xs font-bold uppercase tracking-widest text-gold-light mb-3">Mobile</p>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Apps sob demanda</h3>
+            <p class="text-sm text-gray-400">Aplicativos mobile sob medida para operações, clientes e equipes de campo.</p>
+          </article>
+          <article class="reveal glass gradient-border rounded-3xl p-7">
+            <p class="text-xs font-bold uppercase tracking-widest text-primary mb-3">Integrações</p>
+            <h3 class="font-display text-xl font-bold text-white mb-2">APIs e conectividade</h3>
+            <p class="text-sm text-gray-400">Integrações com ERP, pagamentos, WhatsApp e outros sistemas do seu ecossistema.</p>
+          </article>
+          <article class="reveal reveal-delay-1 glass gradient-border rounded-3xl p-7">
+            <p class="text-xs font-bold uppercase tracking-widest text-gold-light mb-3">Evolução</p>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Painéis e automações</h3>
+            <p class="text-sm text-gray-400">Painéis operacionais, automações e manutenção evolutiva após o lançamento.</p>
+          </article>
+        </div>
+
+        <div class="mt-10 reveal">
+          <a href="#contato" data-interesse="Desenvolvimento Web & Mobile" class="btn-outline-gold inline-flex items-center gap-2 text-gold-light font-semibold px-5 py-3 rounded-xl text-sm">
+            Solicitar orçamento de desenvolvimento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como trabalhamos -->
+    <section id="metodo" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <p class="section-label text-primary text-xs font-bold uppercase mb-2">Método</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Como trabalhamos</h2>
+        </div>
+        <ol class="grid md:grid-cols-3 gap-5">
+          <li class="reveal glass rounded-2xl p-6">
+            <span class="inline-flex w-9 h-9 items-center justify-center rounded-xl bg-primary/15 text-primary font-display font-bold text-sm mb-4">1</span>
+            <h3 class="font-display font-bold text-white mb-2">Diagnóstico</h3>
+            <p class="text-sm text-gray-400">Entendemos o cenário, prioridades e riscos da operação ou do produto.</p>
+          </li>
+          <li class="reveal reveal-delay-1 glass rounded-2xl p-6">
+            <span class="inline-flex w-9 h-9 items-center justify-center rounded-xl bg-primary/15 text-primary font-display font-bold text-sm mb-4">2</span>
+            <h3 class="font-display font-bold text-white mb-2">Execução</h3>
+            <p class="text-sm text-gray-400">Implementamos configurações, desenvolvimento ou implantação com acompanhamento.</p>
+          </li>
+          <li class="reveal reveal-delay-2 glass rounded-2xl p-6">
+            <span class="inline-flex w-9 h-9 items-center justify-center rounded-xl bg-gold/15 text-gold-light font-display font-bold text-sm mb-4">3</span>
+            <h3 class="font-display font-bold text-white mb-2">Suporte</h3>
+            <p class="text-sm text-gray-400">Validamos o resultado e seguimos próximos para estabilizar e evoluir.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="py-16 sm:py-24 bg-dark-card/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <p class="section-label text-primary text-xs font-bold uppercase mb-2">Produtos JVTechy</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Aplicativos já disponíveis</h2>
+          <p class="mt-3 text-gray-400">Conheça soluções desenvolvidas pela JVTechy e acesse direto pelo navegador.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto reveal">
+          <article class="glass gradient-border rounded-3xl p-8 sm:p-10">
+            <p class="text-xs font-bold uppercase tracking-widest text-primary mb-3">Produto</p>
+            <h3 class="font-display text-2xl font-bold text-white">AgendaService</h3>
+            <p class="mt-3 text-gray-400">
+              Plataforma de agendamento de serviços domésticos com profissionais verificados, chat, PIX e experiência PWA.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a data-product-link="agendaserviceLanding" class="btn-primary inline-flex items-center justify-center gap-2 text-white font-semibold px-5 py-3 rounded-xl text-sm">
+                Ver site do produto
+              </a>
+              <a data-product-link="agendaserviceApp" class="btn-outline inline-flex items-center justify-center gap-2 text-gray-200 font-semibold px-5 py-3 rounded-xl text-sm">
+                Abrir Web App
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato / Pré-cadastro -->
+    <section id="contato" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <p class="section-label text-primary text-xs font-bold uppercase mb-2">Pré-cadastro</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Fale com a JVTechy</h2>
+          <p class="mt-3 text-gray-400">
+            Preencha o formulário para solicitar informações. Enviamos seu contato via WhatsApp e você também pode escrever por e-mail.
+          </p>
+          <ul class="mt-8 space-y-3 text-sm text-gray-400">
+            <li class="flex gap-2"><span class="text-primary shrink-0">✓</span> Retorno por WhatsApp</li>
+            <li class="flex gap-2"><span class="text-primary shrink-0">✓</span> Atendimento técnico especializado</li>
+            <li class="flex gap-2"><span class="text-primary shrink-0">✓</span> Orçamento sem compromisso</li>
+          </ul>
+          <div class="mt-8 space-y-2 text-sm">
+            <p class="text-gray-500">WhatsApp</p>
+            <a data-wa-link class="text-primary font-semibold hover:underline" data-phone-display>(31) 97248-5122</a>
+            <p class="text-gray-500 mt-4">E-mail</p>
+            <a data-email-display class="text-white font-semibold hover:text-primary" href="mailto:contato@jvtechy.com">contato@jvtechy.com</a>
+          </div>
+        </div>
+
+        <form id="lead-form" class="reveal reveal-delay-1 glass gradient-border rounded-3xl p-6 sm:p-8 space-y-4" novalidate>
+          <div>
+            <label for="lead-nome" class="block text-sm font-medium text-gray-300 mb-1.5">Nome completo *</label>
+            <input id="lead-nome" name="nome" type="text" required class="input-field w-full rounded-xl px-4 py-3 text-sm text-white" placeholder="Seu nome" />
+          </div>
+          <div>
+            <label for="lead-empresa" class="block text-sm font-medium text-gray-300 mb-1.5">Empresa / Loja</label>
+            <input id="lead-empresa" name="empresa" type="text" class="input-field w-full rounded-xl px-4 py-3 text-sm text-white" placeholder="Nome da empresa" />
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="lead-email" class="block text-sm font-medium text-gray-300 mb-1.5">E-mail *</label>
+              <input id="lead-email" name="email" type="email" required class="input-field w-full rounded-xl px-4 py-3 text-sm text-white" placeholder="seu@email.com" />
+            </div>
+            <div>
+              <label for="lead-whatsapp" class="block text-sm font-medium text-gray-300 mb-1.5">WhatsApp *</label>
+              <input id="lead-whatsapp" name="whatsapp" type="tel" required class="input-field w-full rounded-xl px-4 py-3 text-sm text-white" placeholder="(31) 99999-9999" />
+            </div>
+          </div>
+          <div>
+            <label for="lead-interesse" class="block text-sm font-medium text-gray-300 mb-1.5">Interesse *</label>
+            <select id="lead-interesse" name="interesse" required class="input-field w-full rounded-xl px-4 py-3 text-sm text-white">
+              <option value="">Selecione</option>
+              <option value="Suporte Consinco / PDV">Suporte Consinco / PDV</option>
+              <option value="Desenvolvimento Web & Mobile">Desenvolvimento Web & Mobile</option>
+              <option value="Produtos JVTechy (AgendaService)">Produtos JVTechy (AgendaService)</option>
+              <option value="Ambos / Outro">Ambos / Outro</option>
+            </select>
+          </div>
+          <div>
+            <label for="lead-mensagem" class="block text-sm font-medium text-gray-300 mb-1.5">Mensagem</label>
+            <textarea id="lead-mensagem" name="mensagem" rows="3" class="input-field w-full rounded-xl px-4 py-3 text-sm text-white resize-y" placeholder="Conte brevemente sua necessidade"></textarea>
+          </div>
+          <button type="submit" class="w-full btn-primary text-white font-bold py-3.5 rounded-xl text-sm">
+            Enviar pré-cadastro
+          </button>
+          <p class="text-[11px] text-gray-500 text-center">Ao enviar, você concorda em ser contactado pela JVTechy via WhatsApp e e-mail.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 sm:py-24 bg-dark-card/40">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 reveal">
+          <p class="section-label text-primary text-xs font-bold uppercase mb-2">FAQ</p>
+          <h2 class="font-display text-2xl font-bold text-white">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 reveal">
+          <div class="faq-item glass rounded-xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between p-4 text-left font-semibold text-white text-sm">
+              Atendem supermercados com TOTVS Consinco?
+              <svg class="faq-chevron w-5 h-5 text-gray-400 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-panel px-4 pb-4"><p class="text-sm text-gray-400">Sim. Atuamos com suporte especializado em TOTVS Linha Consinco ERP/PDV, AcruxMonitor, pagamentos, usuários e promoções.</p></div>
+          </div>
+          <div class="faq-item glass rounded-xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between p-4 text-left font-semibold text-white text-sm">
+              Desenvolvem sistemas sob medida?
+              <svg class="faq-chevron w-5 h-5 text-gray-400 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-panel px-4 pb-4"><p class="text-sm text-gray-400">Sim. Desenvolvemos aplicações Web, PWA e Mobile sob demanda, além de integrações e painéis operacionais.</p></div>
+          </div>
+          <div class="faq-item glass rounded-xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between p-4 text-left font-semibold text-white text-sm">
+              Como solicito um orçamento?
+              <svg class="faq-chevron w-5 h-5 text-gray-400 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-panel px-4 pb-4"><p class="text-sm text-gray-400">Preencha o pré-cadastro nesta página. Seu contato é enviado via WhatsApp para a equipe JVTechy.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-2">
+        <img src="assets/logo.svg" alt="JVTechy" class="h-9 mb-4" />
+        <p class="text-sm text-gray-400 max-w-md">
+          JVTechy — Desenvolvimento e Licenciamento de Softwares. Especialistas em varejo Consinco e soluções digitais sob demanda.
+        </p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-white mb-3">Navegação</p>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="#consinco" class="hover:text-primary">Consinco / PDV</a></li>
+          <li><a href="#desenvolvimento" class="hover:text-primary">Desenvolvimento</a></li>
+          <li><a href="#produtos" class="hover:text-primary">Produtos</a></li>
+          <li><a href="#contato" class="hover:text-primary">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-white mb-3">Contato</p>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a data-wa-link data-phone-display class="hover:text-primary">(31) 97248-5122</a></li>
+          <li><a data-email-display href="mailto:contato@jvtechy.com" class="hover:text-primary">contato@jvtechy.com</a></li>
+          <li><a href="privacidade.html" class="hover:text-primary">Privacidade</a></li>
+          <li><a href="termos.html" class="hover:text-primary">Termos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-white/5">
+      <p class="text-xs text-gray-500">© <span id="year"></span> JVTechy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] glass-strong text-sm text-white px-4 py-3 rounded-xl shadow-2xl"></div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

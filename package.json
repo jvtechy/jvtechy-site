@@ -1,0 +1,10 @@
+{
+  "name": "jvtechy-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site institucional da JVTechy — Desenvolvimento e Licenciamento de Softwares",
+  "scripts": {
+    "dev": "npx --yes serve . -p 4322",
+    "preview": "npx --yes serve . -p 4322"
+  }
+}
